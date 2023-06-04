@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyLeasing.Web.Data.Entities
 {
@@ -11,23 +12,26 @@ namespace MyLeasing.Web.Data.Entities
         public string Document { get; set; }
 
         [Required]
-        [MaxLength(25, ErrorMessage = "The field {0} can only contain {1} characters in length")]
+        [MaxLength(50)]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
-        [MaxLength(25, ErrorMessage = "The field {0} can only contain {1} characters in length")]
+        [MaxLength(50)]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [StringLength(9,ErrorMessage = "Number cannot exceed 9 digits")]
+        [MaxLength(9)]
         [Display(Name = "Fixed Phone")]
         public string FixedPhone { get; set; }
 
-        [StringLength(9, ErrorMessage = "Number cannot exceed 9 digits")]
+        [MaxLength(9)]
         [Display(Name = "Cell Phone")]
         public string CellPhone { get; set; }
 
+        [MaxLength(100)]
         public string Address { get; set; }
+
+        public User User { get; set; }
     }
 }
