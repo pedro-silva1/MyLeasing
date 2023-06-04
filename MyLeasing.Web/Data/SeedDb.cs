@@ -39,7 +39,7 @@ namespace MyLeasing.Web.Data
 
         private void AddOwner(string firstname, string lastname)
         {
-            _context.Owners.Add(new Owner
+            _context.Owners.Add(new Entities.Owner
             {
                 Document = _random.Next(100000000, 999999999).ToString(),
                 FirstName = firstname,
