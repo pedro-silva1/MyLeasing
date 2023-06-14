@@ -25,7 +25,7 @@ namespace MyLeasing.Web.Data
         {
             await _context.Database.MigrateAsync();
 
-            var user = await _userHelper.GetUserByEmaAsync("pedrosilva@gmail.com");
+            var user = await _userHelper.GetUserByEmailAsync("pedrosilva@gmail.com");
 
             if (user == null)
             {

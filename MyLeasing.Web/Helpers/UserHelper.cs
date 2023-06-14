@@ -18,7 +18,7 @@ namespace MyLeasing.Web.Helpers
             return await _userManager.CreateAsync(user, password);
         }
 
-        public async Task<User> GetUserByEmaAsync(string email)
+        public async Task<User> GetUserByEmailAsync(string email)
         {
             return await _userManager.FindByEmailAsync(email);
         }

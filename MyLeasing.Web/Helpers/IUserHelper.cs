@@ -6,7 +6,7 @@ namespace MyLeasing.Web.Helpers
 {
     public interface IUserHelper
     {
-        Task<User> GetUserByEmaAsync(string email);
+        Task<User> GetUserByEmailAsync(string email);
 
         Task<IdentityResult> AddUserAsync(User user, string password);
     }

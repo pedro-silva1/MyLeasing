@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MyLeasing.Web.Data.Entities
 {
@@ -32,6 +31,22 @@ namespace MyLeasing.Web.Data.Entities
         [MaxLength(100)]
         public string Address { get; set; }
 
+        [Display(Name = "Profile Picture")]
+        public string ProfilePictureUrl { get; set; }
+
         public User User { get; set; }
+
+        public string ProfilePictureFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(ProfilePictureUrl))
+                {
+                    return null;
+                }
+
+                return $"Alterar depois";
+            }
+        }
     }
 }
